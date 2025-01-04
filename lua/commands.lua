@@ -1,0 +1,9 @@
+vim.api.nvim_create_user_command(
+  'TSHealth',
+  function()
+    require("lspconfig.health").check()
+    require("nvim-lsp-installer.health").check()
+    require("nvim-treesitter.health").check()
+  end,
+  {}
+)
