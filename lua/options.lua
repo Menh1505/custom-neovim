@@ -36,7 +36,6 @@ vim.opt.sidescrolloff = 8                       -- minimal number of screen colu
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 vim.opt.whichwrap = "bs<>[]hl"                  -- which "horizontal" keys are allowed to travel to prev/next line
 
-vim.g.netrw_winsize = 20                        -- Explorer tab 20% width
 vim.g.mapleader = " "                           -- Set <leader> key is Space
 
 vim.g.loaded_netrw = 1                          -- disable netrw at the very start of your init.lua

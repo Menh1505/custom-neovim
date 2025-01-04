@@ -11,10 +11,18 @@ keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<A-h>", "<C-w>h", opts)
+keymap("n", "<A-j>", "<C-w>j", opts)
+keymap("n", "<A-k>", "<C-w>k", opts)
+keymap("n", "<A-l>", "<C-w>l", opts)
+keymap("i", "<A-h>", "<ESC><C-w>h", opts)
+keymap("i", "<A-j>", "<ESC><C-w>j", opts)
+keymap("i", "<A-k>", "<ESC><C-w>k", opts)
+keymap("i", "<A-l>", "<ESC><C-w>l", opts)
+keymap('t', '<A-h>', [[<Cmd>wincmd h<CR>]], opts)
+keymap('t', '<A-j>', [[<Cmd>wincmd j<CR>]], opts)
+keymap('t', '<A-k>', [[<Cmd>wincmd k<CR>]], opts)
+keymap('t', '<A-l>', [[<Cmd>wincmd l<CR>]], opts)
 
 -- Press jkl fast to exit insert mode 
 keymap("i", "``", "<ESC>", opts)
