@@ -2,6 +2,7 @@ local opts = { noremap = true, silent = true }
 local nowaitOpts = {noremap = true, silent = true, nowait = true}
 local keymap = vim.keymap.set
 
+-- keymap("", "", "", opts)
 -- Do not save data to clipboard when delete
 keymap("n", "c", '"_c', opts)
 keymap("n", "d", '"_d', opts)    
@@ -45,6 +46,13 @@ keymap('t', '<A-l>', [[<Cmd>wincmd l<CR>]], opts)
 keymap("n", "<leader>ta", ":tabnew<CR>", opts)
 keymap("n", "<leader>tn", ":tabNext<CR>", opts)
 keymap("n", "<leader>to", ":tabonly<CR>", opts)
+
+-- Buffer
+keymap("n", "<leader>ba", ":badd<CR>", opts)
+keymap("n", "<leader>bd", ":bdelete<CR>", opts)
+keymap("n", "<leader>bo", ":%bd|edit#|bd#<CR>", opts)
+keymap("n", "<tab>", ":bNext<CR>", opts)
+keymap("n", "<S-tab>", ":bprevious", opts)
 
 -- Press `` fast to exit insert mode 
 keymap("i", "``", "<ESC>", opts)
