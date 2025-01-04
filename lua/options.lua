@@ -35,3 +35,6 @@ vim.opt.scrolloff = 8                           -- minimal number of screen line
 vim.opt.sidescrolloff = 8                       -- minimal number of screen columns either side of cursor if wrap is `false`
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 vim.opt.whichwrap = "bs<>[]hl"                  -- which "horizontal" keys are allowed to travel to prev/next line
+
+vim.g.netrw_winsize = 20                        -- Explorer tab 20% width
+vim.g.mapleader = " "                           -- Set <leader> key is Space

@@ -24,14 +24,17 @@ keymap("v", "<", "<gv^", opts)
 keymap("v", ">", ">gv^", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +1<CR>", opts)
-keymap("n", "<C-Down>", ":resize -1<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -1<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +1<CR>", opts)
+keymap("n", "<C-Up>", ":resize +5<CR>", opts)
+keymap("n", "<C-Down>", ":resize -5<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -5<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +5<CR>", opts)
 
 -- Quick exit terminal mode
 keymap('t', '<C-x>', [[<C-\><C-n>]], opts)
 
 -- Quick split terminal
-keymap("n", "<Space>th", ":split | term<CR>", opts)
-keymap("n", "<Space>tv", ":vsplit | term<CR>", opts)
+keymap("n", "<leader>th", ":split | term<CR>", opts)
+keymap("n", "<leader>tv", ":vsplit | term<CR>", opts)
+
+-- Neovim tree
+keymap("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
