@@ -16,6 +16,10 @@ keymap("n", "<C-a>", "ggVG$", nowaitOpts)
 keymap("v", "<C-c>", "y", {noremap = true, nowait = true})
 keymap("n", "<C-v>", "p", nowaitOpts)
 
+-- Undo - Redo
+keymap("n", "<C-z>", "u", nowaitOpts)
+keymap("n", "<C-y>", "<C-r>", nowaitOpts)
+
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)
 keymap("n", "<A-j>", "<C-w>j", opts)
