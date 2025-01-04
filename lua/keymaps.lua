@@ -27,7 +27,6 @@ keymap("n", "<C-s>", ":w<CR>", nowaitOpts)
 
 -- Quit
 keymap("n", "<C-q>", ":q<CR>", nowaitOpts)
-keymap('t', '<C-q>', [[<C-\><C-n>]], opts) -- For terminal
 
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)
@@ -70,8 +69,9 @@ keymap("n", "<C-Left>", ":vertical resize -3<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +3<CR>", opts)
 
 -- Quick split terminal
-keymap("n", "<leader>th", ":split | term<CR>", opts)
-keymap("n", "<leader>tv", ":vsplit | term<CR>", opts)
+keymap("n", "<leader>th", ":10split | term<CR>", opts)
+keymap("n", "<leader>tv", ":50vsplit | term<CR>", opts)
+keymap('t', '<C-q>', [[<C-\><C-n>]], opts) -- Exit insert mode 
 
 -- Neovim tree
 keymap("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
