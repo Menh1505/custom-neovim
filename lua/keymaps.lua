@@ -1,4 +1,5 @@
 local opts = { noremap = true, silent = true }
+local nowaitOpts = {noremap = true, silent = true, nowait = true}
 local keymap = vim.keymap.set
 
 -- Do not save data to clipboard when delete
@@ -9,6 +10,11 @@ keymap("n", "d", '"_d', opts)
 keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap("v", "p", '"_dP', opts)
+
+-- Copy - Past - Select all
+keymap("n", "<C-a>", "ggVG$", nowaitOpts) 
+keymap("v", "<C-c>", "y", {noremap = true, nowait = true})
+keymap("n", "<C-v>", "p", nowaitOpts)
 
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)
