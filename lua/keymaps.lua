@@ -24,10 +24,10 @@ keymap("v", "<", "<gv^", opts)
 keymap("v", ">", ">gv^", opts)
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +5<CR>", opts)
-keymap("n", "<C-Down>", ":resize -5<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -5<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +5<CR>", opts)
+keymap("n", "<C-Up>", ":resize +3<CR>", opts)
+keymap("n", "<C-Down>", ":resize -3<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -3<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +3<CR>", opts)
 
 -- Quick exit terminal mode
 keymap('t', '<C-x>', [[<C-\><C-n>]], opts)

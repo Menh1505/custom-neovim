@@ -38,3 +38,8 @@ vim.opt.whichwrap = "bs<>[]hl"                  -- which "horizontal" keys are a
 
 vim.g.netrw_winsize = 20                        -- Explorer tab 20% width
 vim.g.mapleader = " "                           -- Set <leader> key is Space
+
+vim.g.loaded_netrw = 1                          -- disable netrw at the very start of your init.lua
+vim.g.loaded_netrwPlugin = 1
+
+vim.opt.termguicolors = true                    -- optionally enable 24-bit colour
