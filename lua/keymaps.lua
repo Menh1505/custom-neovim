@@ -20,6 +20,13 @@ keymap("n", "<C-v>", "p", nowaitOpts)
 keymap("n", "<C-z>", "u", nowaitOpts)
 keymap("n", "<C-y>", "<C-r>", nowaitOpts)
 
+-- Save
+keymap("n", "<C-s>", ":w<CR>", nowaitOpts)
+
+-- Quit
+keymap("n", "<C-q>", ":q<CR>", nowaitOpts)
+keymap('t', '<C-q>', [[<C-\><C-n>]], opts) -- For terminal
+
 -- Better window navigation
 keymap("n", "<A-h>", "<C-w>h", opts)
 keymap("n", "<A-j>", "<C-w>j", opts)
@@ -34,7 +41,7 @@ keymap('t', '<A-j>', [[<Cmd>wincmd j<CR>]], opts)
 keymap('t', '<A-k>', [[<Cmd>wincmd k<CR>]], opts)
 keymap('t', '<A-l>', [[<Cmd>wincmd l<CR>]], opts)
 
--- Press jkl fast to exit insert mode 
+-- Press `` fast to exit insert mode 
 keymap("i", "``", "<ESC>", opts)
 
 -- Stay in indent mode
@@ -46,9 +53,6 @@ keymap("n", "<C-Up>", ":resize +3<CR>", opts)
 keymap("n", "<C-Down>", ":resize -3<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -3<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +3<CR>", opts)
-
--- Quick exit terminal mode
-keymap('t', '<C-x>', [[<C-\><C-n>]], opts)
 
 -- Quick split terminal
 keymap("n", "<leader>th", ":split | term<CR>", opts)
