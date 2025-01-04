@@ -1,6 +1,7 @@
 local opts = { noremap = true, silent = true }
 local nowaitOpts = {noremap = true, silent = true, nowait = true}
 local keymap = vim.keymap.set
+local builtin = require('telescope.builtin')
 
 -- keymap("", "", "", opts)
 -- Do not save data to clipboard when delete
@@ -56,6 +57,7 @@ keymap("n", "<S-tab>", ":bprevious", opts)
 
 -- Press `` fast to exit insert mode 
 keymap("i", "``", "<ESC>", opts)
+keymap("v", "``", "<ESC>", opts)
 
 -- Stay in indent mode
 keymap("v", "<", "<gv^", opts)
@@ -73,3 +75,10 @@ keymap("n", "<leader>tv", ":vsplit | term<CR>", opts)
 
 -- Neovim tree
 keymap("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
+
+-- Find
+keymap('n', '<leader>ff', builtin.find_files, { desc = 'Find files' })
+keymap('n', '<leader>fg', builtin.live_grep, { desc = 'Find live grep' })
+keymap('n', '<leader>fb', builtin.buffers, { desc = 'Find buffers' })
+keymap('n', '<leader>fh', builtin.help_tags, { desc = 'Find help tags' })
+keymap('n', '<leader>fm', builtin.keymaps, {desc = 'Find keymaps'})
