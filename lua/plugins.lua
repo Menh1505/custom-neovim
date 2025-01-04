@@ -11,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- command :Lazy
 require("lazy").setup({
   {
     "nvim-lualine/lualine.nvim", 
