@@ -41,6 +41,11 @@ keymap('t', '<A-j>', [[<Cmd>wincmd j<CR>]], opts)
 keymap('t', '<A-k>', [[<Cmd>wincmd k<CR>]], opts)
 keymap('t', '<A-l>', [[<Cmd>wincmd l<CR>]], opts)
 
+-- Tab
+keymap("n", "<leader>tn", ":tabnew<CR>", opts)
+keymap("n", "<S-tab>", ":tabNext<CR>", opts)
+keymap("n", "<leader>to", ":tabonly<CR>", opts)
+
 -- Press `` fast to exit insert mode 
 keymap("i", "``", "<ESC>", opts)
 
