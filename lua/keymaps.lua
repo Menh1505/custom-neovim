@@ -68,9 +68,9 @@ keymap("n", "<C-Down>", ":resize -3<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -3<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +3<CR>", opts)
 
--- Quick split terminal
-keymap("n", "<leader>th", ":10split | term<CR>", opts)
-keymap("n", "<leader>tv", ":50vsplit | term<CR>", opts)
+-- Quick terminal
+-- keymap("n", "<leader>th", ":10split | term<CR>", opts)
+-- keymap("n", "<leader>tv", ":50vsplit | term<CR>", opts)
 keymap('t', '<C-q>', [[<C-\><C-n>]], opts) -- Exit insert mode 
 
 -- Neovim tree
