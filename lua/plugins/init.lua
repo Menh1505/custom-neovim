@@ -26,15 +26,3 @@ for _, file in ipairs(plugin_files) do
 end
 
 require("lazy").setup(plugin_configs)
-
-local group = vim.api.nvim_create_augroup("LazyReload", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "init.lua", "lua/plugins/*.lua" },
-  callback = function()
-    -- Reload the configuration
-    vim.cmd("source " .. vim.fn.stdpath("config") .. "/init.lua")
-    -- Sync plugins
-    require("lazy").sync()
-  end,
-  group = group,
-})
