@@ -8,6 +8,8 @@ keymap("i", "<C-a>", "<ESC>ggVG$i", nowaitOpts)
 keymap("v", "<C-c>", "y", { noremap = true, nowait = true })
 keymap("n", "<C-v>", "p", nowaitOpts)
 keymap("i", "<C-v>", "<ESC>pi", nowaitOpts)
+keymap("", "<C-z>", "<ESC>u", nowaitOpts)
+keymap("i", "<C-z>", "<ESC>u", nowaitOpts)
 
 -- Press `` fast to exit insert mode
 keymap("i", "``", "<ESC>", opts)
