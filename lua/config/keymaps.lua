@@ -1,21 +1,24 @@
 local opts = { noremap = true, silent = true }
 local nowaitOpts = { noremap = true, silent = true, nowait = true }
-local keymap = vim.keymap.set
+local map = vim.keymap.set
+
+-- Enter conmmand
+map("n", ";", ":", { desc = "CMD enter conmmand mode" })
 
 -- Copy - Past - Select all
-keymap("n", "<C-a>", "ggVG$", nowaitOpts)
-keymap("i", "<C-a>", "<ESC>ggVG$i", nowaitOpts)
-keymap("v", "<C-c>", "y", { noremap = true, nowait = true })
-keymap("n", "<C-v>", "p", nowaitOpts)
-keymap("i", "<C-v>", "<ESC>pi", nowaitOpts)
-keymap("", "<C-z>", "<ESC>u", nowaitOpts)
-keymap("i", "<C-z>", "<ESC>u", nowaitOpts)
+map("n", "<C-a>", "ggVG$", nowaitOpts)
+map("i", "<C-a>", "<ESC>ggVG$i", nowaitOpts)
+map("v", "<C-c>", "y", { noremap = true, nowait = true })
+map("n", "<C-v>", "p", nowaitOpts)
+map("i", "<C-v>", "<ESC>pi", nowaitOpts)
+map("", "<C-z>", "<ESC>u", nowaitOpts)
+map("i", "<C-z>", "<ESC>u", nowaitOpts)
 
 -- Press `` fast to exit insert mode
-keymap("i", "``", "<ESC>", opts)
-keymap("v", "``", "<ESC>", opts)
-keymap("n", "<C-q>", ":q<CR>", nowaitOpts)
-keymap("t", "<C-q>", [[<C-\><C-n>]], opts) -- Exit insert mode interminal
+map("i", "``", "<ESC>", opts)
+map("v", "``", "<ESC>", opts)
+map("n", "<C-q>", ":q<CR>", nowaitOpts)
+map("t", "<C-q>", [[<C-\><C-n>]], opts) -- Exit insert mode interminal
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
