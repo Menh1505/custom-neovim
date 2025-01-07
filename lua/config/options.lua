@@ -61,3 +61,9 @@ opt.splitkeep = "cursor"
 opt.mouse = ""
 
 opt.formatoptions:append({ "r" })
+
+-- Powershell for window
+opt.shell = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+opt.shellquote = '"'
+opt.shellxquote = ""
