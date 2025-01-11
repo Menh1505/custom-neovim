@@ -10,7 +10,7 @@ if vim.g.neovide then
   vim.g.neovide_padding_right = 0
   vim.g.neovide_padding_left = 0
 
-  g.neovide_transparency = 0.95 -- Transparent
+  g.neovide_transparency = 0.9 -- Transparent
   g.neovide_window_blurred = true
 
   g.neovide_floating_blur_amount_x = 2.0

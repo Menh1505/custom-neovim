@@ -2,6 +2,12 @@ local opts = { noremap = true, silent = true }
 local nowaitOpts = { noremap = true, silent = true, nowait = true }
 local map = vim.keymap.set
 
+-- Do not save data to clipboard when delete
+map("n", "c", '"_c', opts)
+map("v", "c", '"_c', opts)
+map("n", "d", '"_d', opts)
+map("v", "d", '"_d', opts)
+
 -- Enter conmmand
 map("n", ";", ":", { desc = "CMD enter conmmand mode" })
 
@@ -10,6 +16,7 @@ map("n", "<C-a>", "ggVG$", nowaitOpts)
 map("i", "<C-a>", "<ESC>ggVG$i", nowaitOpts)
 map("v", "<C-c>", "y", { noremap = true, nowait = true })
 map("n", "<C-v>", "p", nowaitOpts)
+map("v", "<C-v>", "<S-p>", nowaitOpts)
 map("i", "<C-v>", "<ESC>pi", nowaitOpts)
 map("", "<C-z>", "<ESC>u", nowaitOpts)
 map("i", "<C-z>", "<ESC>u", nowaitOpts)
