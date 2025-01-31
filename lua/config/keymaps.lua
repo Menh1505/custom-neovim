@@ -2,6 +2,12 @@ local opts = { noremap = true, silent = true }
 local nowaitOpts = { noremap = true, silent = true, nowait = true }
 local map = vim.keymap.set
 
+-- Do not save data to clipboard when delete
+map("n", "c", '"_c', opts)
+map("v", "c", '"_c', opts)
+map("n", "d", '"_d', opts)
+map("v", "d", '"_d', opts)
+
 -- Enter conmmand
 map("n", ";", ":", { desc = "CMD enter conmmand mode" })
 
