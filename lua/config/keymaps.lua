@@ -11,18 +11,7 @@ map("v", "d", '"_d', opts)
 -- Enter conmmand
 map("n", ";", ":", { desc = "CMD enter conmmand mode" })
 
--- Copy - Past - Select all
-map("n", "<C-a>", "ggVG$", nowaitOpts)
-map("i", "<C-a>", "<ESC>ggVG$i", nowaitOpts)
-map("v", "<C-c>", "y", { noremap = true, nowait = true })
-map("n", "<C-v>", "p", nowaitOpts)
-map("i", "<C-v>", "<ESC>pi", nowaitOpts)
-map("", "<C-z>", "<ESC>u", nowaitOpts)
-map("i", "<C-z>", "<ESC>u", nowaitOpts)
-
 -- Press `` fast to exit insert mode
-map("i", "``", "<ESC>", opts)
-map("v", "``", "<ESC>", opts)
 map("n", "<C-q>", ":q<CR>", nowaitOpts)
 map("t", "<C-q>", [[<C-\><C-n>]], opts) -- Exit insert mode interminal
 
