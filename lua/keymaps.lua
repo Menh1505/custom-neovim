@@ -4,8 +4,8 @@ local map = vim.keymap.set
 local builtin = require('telescope.builtin')
 
 -- Do not save data to clipboard when delete
-map("n", "c", '"_c', opts)
-map("n", "d", '"_d', opts)    
+map({"n", "v"}, "c", '"_c', opts)
+map({"n", "v"}, "d", '"_d', opts)    
 
 -- better up/down
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
@@ -154,9 +154,6 @@ map("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
 map("n", "<leader>wd", "<C-W>c", { desc = "Delete Window", remap = true })
 Snacks.toggle.zoom():map("<leader>wm"):map("<leader>uZ")
 Snacks.toggle.zen():map("<leader>uz")
-
--- Neovim tree
-map("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
 
 -- Find
 map('n', '<leader>ff', builtin.find_files, { desc = 'Find files' })
