@@ -32,6 +32,6 @@ opt.guifont = "0xProto Nerd Font" -- Font
 opt.backup = false -- creates a backup file
 opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 
-opt.mouse = "" -- Allows mouse in nvim
+opt.mouse = "a" -- Allows mouse in nvim
 
 opt.formatoptions:append({ "r" })
