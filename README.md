@@ -31,43 +31,52 @@ git clone https://github.com/Menh1505/custom-neovim.git ~/.config/nvim && nvim
 
 ```
 git clone https://github.com/Menh1505/custom-neovim.git ~/.var/app/io.neovim.nvim/config/nvim && flatpak run io.neovim.nvim
-```
+``
 
 ## Windows
 
 - If you're using Command Prompt(CMD)
 
-```
-git clone https://github.com/Menh1505/custom-neovim.git %USERPROFILE%\AppData\Local\nvim && nvim
+``
+git clone <https://github.com/Menh1505/custom-neovim.git> %USERPROFILE%\AppData\Local\nvim && nvim
+
 ```
 
 - If you're using PowerShell(pwsh)
 
 ```
-git clone https://github.com/Menh1505/custom-neovim.git $ENV:USERPROFILE\AppData\Local\nvim && nvim
+
+git clone <https://github.com/Menh1505/custom-neovim.git> $ENV:USERPROFILE\AppData\Local\nvim && nvim
+
 ```
 
 - If the above path doesnt work, try any of these paths :
   - For CMD : %LOCALAPPDATA%\nvim
 
 ```
+
 C:\Users\%USERNAME%\AppData\Local\nvim
+
 ```
 
 - For PowerShell : $ENV:LocalAppData\nvim
 
 ```
+
 C:\Users\$ENV:USERNAME\AppData\Local\nvim
+
 ```
 
 ## Docker
 
 ```
+
 docker run -w /root -it --rm alpine:latest sh -uelic '
-  apk add git nodejs neovim ripgrep build-base wget --update
-  git clone https://github.com/NvChad/starter ~/.config/nvim
-  nvim
-  '
+apk add git nodejs neovim ripgrep build-base wget --update
+git clone <https://github.com/NvChad/starter> ~/.config/nvim
+nvim
+'
+
 ```
 
 - Run :MasonInstallAll command after lazy.nvim finishes downloading plugins.
@@ -83,20 +92,29 @@ docker run -w /root -it --rm alpine:latest sh -uelic '
 ```
 
 # Linux / MacOS (unix)
+
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
 
 # Flatpak (linux)
+
 rm -rf ~/.var/app/io.neovim.nvim/config/nvim
 rm -rf ~/.var/app/io.neovim.nvim/data/nvim
 rm -rf ~/.var/app/io.neovim.nvim/.local/state/nvim
 
 # Windows CMD
+
 rd -r ~\AppData\Local\nvim
 rd -r ~\AppData\Local\nvim-data
 
 # Windows PowerShell
+
 rm -Force ~\AppData\Local\nvim
 rm -Force ~\AppData\Local\nvim-data
+
+```
+
+```
+
 ```
