@@ -16,11 +16,7 @@ end, { noremap = true, silent = true, desc = "Copy diagnostic" })
 
 -- Search Google in Vim
 _G.google_search = function()
-  -- Flag watch input status
-  local input_active = true
-
   vim.ui.input({ prompt = "Search Google: " }, function(input)
-    input_active = false -- Set false when finish input
     if input == nil or input == "" then -- Esc or nil to quit google_search
       vim.api.nvim_input("<Esc>")
       return
@@ -33,12 +29,6 @@ _G.google_search = function()
       os.execute(open_cmd .. " '" .. url .. "'")
     end
   end)
-  -- Close if not focus
-  vim.defer_fn(function()
-    if input_active then
-      vim.api.nvim_input("<Esc>") -- ESC
-    end
-  end, 500) -- CLose after 1000ms
 end
 
 -- Keymap Google Search
