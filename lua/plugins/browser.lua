@@ -1,5 +1,11 @@
 vim.api.nvim_create_user_command("OpenURL", function(opts)
   local url = opts.args
+
+  -- Auto add https://
+  if not url:match("^https?://") then
+    url = "https://" .. url
+  end
+
   local open_cmd
 
   if vim.fn.has("mac") == 1 then
