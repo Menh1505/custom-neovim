@@ -19,57 +19,50 @@
   - [iterm2](https://iterm2.com/) (Macos)
 - Delete old neovim folders (check commands below)
 
-# Install
+## Install
 
 ## Linux/Macos
 
-```
+```bash
 git clone https://github.com/Menh1505/custom-neovim.git ~/.config/nvim && nvim
 ```
 
 ## Flatpak
 
-```
+```bash
 git clone https://github.com/Menh1505/custom-neovim.git ~/.var/app/io.neovim.nvim/config/nvim && flatpak run io.neovim.nvim
-``
+```
 
 ## Windows
 
 - If you're using Command Prompt(CMD)
 
-``
+```bash
 git clone <https://github.com/Menh1505/custom-neovim.git> %USERPROFILE%\AppData\Local\nvim && nvim
-
 ```
 
 - If you're using PowerShell(pwsh)
 
-```
-
+```bash
 git clone <https://github.com/Menh1505/custom-neovim.git> $ENV:USERPROFILE\AppData\Local\nvim && nvim
-
 ```
 
 - If the above path doesnt work, try any of these paths :
   - For CMD : %LOCALAPPDATA%\nvim
 
-```
-
+```cmd
 C:\Users\%USERNAME%\AppData\Local\nvim
-
 ```
 
 - For PowerShell : $ENV:LocalAppData\nvim
 
-```
-
+```pwsh
 C:\Users\$ENV:USERNAME\AppData\Local\nvim
-
 ```
 
 ## Docker
 
-```
+```docker
 
 docker run -w /root -it --rm alpine:latest sh -uelic '
 apk add git nodejs neovim ripgrep build-base wget --update
@@ -83,13 +76,13 @@ nvim
 - Delete the .git folder from nvim folder.
 - Learn customization of ui & base46 from :h nvui.
 
-# Update
+## Update
 
 - Lazy sync command
 
-# Uninstall
+## Uninstall
 
-```
+```cmd
 
 # Linux / MacOS (unix)
 
@@ -112,9 +105,5 @@ rd -r ~\AppData\Local\nvim-data
 
 rm -Force ~\AppData\Local\nvim
 rm -Force ~\AppData\Local\nvim-data
-
-```
-
-```
 
 ```
