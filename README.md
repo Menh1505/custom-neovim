@@ -21,19 +21,19 @@
 
 ## Install
 
-## Linux/Macos
+### Linux/Macos
 
 ```bash
 git clone https://github.com/Menh1505/custom-neovim.git ~/.config/nvim && nvim
 ```
 
-## Flatpak
+### Flatpak
 
 ```bash
 git clone https://github.com/Menh1505/custom-neovim.git ~/.var/app/io.neovim.nvim/config/nvim && flatpak run io.neovim.nvim
 ```
 
-## Windows
+### Windows
 
 - If you're using Command Prompt(CMD)
 
@@ -60,7 +60,7 @@ C:\Users\%USERNAME%\AppData\Local\nvim
 C:\Users\$ENV:USERNAME\AppData\Local\nvim
 ```
 
-## Docker
+### Docker
 
 ```docker
 
@@ -72,15 +72,17 @@ nvim
 
 ```
 
+### Setup
+
 - Run :MasonInstallAll command after lazy.nvim finishes downloading plugins.
 - Delete the .git folder from nvim folder.
 - Learn customization of ui & base46 from :h nvui.
 
-## Update
+### Update
 
 - Lazy sync command
 
-## Uninstall
+### Uninstall
 
 ```cmd
 
